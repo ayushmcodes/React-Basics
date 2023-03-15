@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#card{
+    margin: 50px auto 0 auto;
+    height: 50vh;
+    width: 20vw;
+    background-color: plum;
+    border-radius: 10px;
+}
+@media only screen and (max-width:1320px)
+{
+    #card{
+        width: 40vw;
+    }
+}
+#inputholder{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#inputholder input{
+    position: relative;
+    top: 10px;
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    color: black;
+    text-align: center;
+}
