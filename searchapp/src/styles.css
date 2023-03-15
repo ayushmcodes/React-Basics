@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+h3{
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
 #card{
     margin: 50px auto 0 auto;
     height: 50vh;
@@ -30,4 +35,23 @@
     border-style: none;
     color: black;
     text-align: center;
+}
+
+#listholder{
+    margin-top: 20px;
+    text-align: center;
+}
+
+ul{
+ 
+    list-style: none;
+}
+
+ul li{
+    margin: 10px auto 0 auto;
+
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
 }
