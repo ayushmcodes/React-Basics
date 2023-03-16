@@ -1,0 +1,44 @@
+body{
+    background-color: #DEA7E4;
+}
+
+h1,h2{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    padding: 10px;
+}
+
+#card{
+    width: 30vw;
+    height: 40vh;
+    background-color: #6C2773;
+    margin: 0 auto 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+
+@media screen and (max-width:1350px){
+    #card{
+        width: 50vw;
+    }    
+}
+
+button{
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    font-size: large;
+    background-color: #511D56;
+    color: white;
+    border: none;
+}
+
+button:active{
+    background-color: #4B1850;
+}
