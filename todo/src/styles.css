@@ -18,13 +18,41 @@ body{
 #input1{
     width: 65%;
     border: none;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: left;
+    font-size: large;
+}
+
+#input1:focus{
+    outline: none;
+}
+
+#addicon{
+    height: 100%;
+    color:  #FFB252;
+    background-color:white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#addicon:active{
+    background-color: orange;
+    color: white;
 }
 
 #input2{
     width: 30%;
     border: none;
     border-radius: 15px;
+    margin-left: 20px;
+    font-size: large;
+}
+
+#input2:focus{
+    outline: none;
 }
 
 
