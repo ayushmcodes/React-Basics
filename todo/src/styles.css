@@ -1,0 +1,31 @@
+h1{
+    color: white;
+    text-align: center;
+}
+body{
+    background-color: #FFB252;
+}
+
+#div1{
+    margin:50px auto 10px auto;
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+#input1{
+    width: 65%;
+    border: none;
+    border-radius: 15px;
+}
+
+#input2{
+    width: 30%;
+    border: none;
+    border-radius: 15px;
+}
+
+
+
