@@ -1,56 +1,49 @@
-import "./styles.css";
-import { useState } from "react";
+import './App.css';
+import { useState } from 'react';
 
-export default function App() {
-  const [items, setItems] = useState([]);
+function Item({item,remove}){
+  return (
+    <>
+    <li>
+      {item}<button className='delete' onClick={remove}>x</button>
+    </li>
+    </>
+  );
+}
 
-  function onRemoveItem(itemToRemove) {
-    const newItems = items.filter((item) => {
-      return item !== itemToRemove;
-    });
-    setItems(newItems);
-  }
 
-  function onSubmit(event) {
+function App() {
+  const [items,setItems]=useState([])
+
+  function onSubmit(event){
     event.preventDefault();
     const form = event.target;
-    const input = form.item;
+    console.log(form)
+    const input = form.inputbar;
+    console.log(input)
     const newItems = [...items, input.value];
     setItems(newItems);
     form.reset();
   }
 
+  function removeitem(e){
+    console.log("item removed");
+  }
+
   return (
     <>
-      <h1>Project 4: Shopping List</h1>
-      <div className="shopping-list">
-        <h2>Items To Buy</h2>
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="item"
-            placeholder="Add a new item"
-            required
-          />
-          <button>Add</button>
-        </form>
-        <ul>
-          {items.map((item, index) => (
-            <Item onRemoveItem={onRemoveItem} key={item + index} item={item} />
-          ))}
-        </ul>
-      </div>
+    <h2>Shopping List</h2>
+    <div id="box">
+    <form onSubmit={onSubmit}>
+      <input type="text" name="inputbar" id="inputbar" placeholder="Add a new item" />
+      <button>ADD</button>
+    </form>
+    <ul>
+    {items.map((item)=>(<Item item={item} remove={removeitem}/>))}
+    </ul>
+    </div>
     </>
   );
 }
 
-function Item({ item, onRemoveItem }) {
-  return (
-    <li>
-      {item}
-      <button className="delete" onClick={() => onRemoveItem(item)}>
-        x
-      </button>
-    </li>
-  );
-}
+export default App;
